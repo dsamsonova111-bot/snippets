@@ -1,0 +1,303 @@
+{
+  "info": {
+    "_postman_id": "1b28f973-3aff-4263-8c06-79151e073761",
+    "name": "Snippets",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60378057",
+    "_collection_link": "https://go.postman.co/collection/60378057-1b28f973-3aff-4263-8c06-79151e073761?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "список (JSON)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/snippets/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "snippets",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "список (html)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "text/html"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/snippets/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "snippets",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "суффикс .json",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/snippets.json",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "snippets.json"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "создать сниппет",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "dasha",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "mama",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Проверка задания 3\",\r\n  \"code\": \"print('test task 3')\",\r\n  \"linenos\": false,\r\n  \"language\": \"python\",\r\n  \"style\": \"friendly\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/snippets/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "snippets",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "один сниппет",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "dasha",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "mama",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/snippets/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "snippets",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "обновить сниппет",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "dasha",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "mama",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Обновлённый тест 3 задания\",\r\n  \"code\": \"x = 123\\nprint('updated from Postman')\",\r\n  \"linenos\": true,\r\n  \"language\": \"python\",\r\n  \"style\": \"monokai\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/snippets/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "snippets",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "удалить сниппет",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "dasha",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "mama",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/snippets/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "snippets",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "несуществующий (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/snippets/999999/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "snippets",
+            "999999",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "highlighted",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
